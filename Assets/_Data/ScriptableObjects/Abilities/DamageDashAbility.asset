@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0270d5a5fa1760f4e8203cb09f053b6c, type: 3}
+  m_Name: DamageDashAbility
+  m_EditorClassIdentifier: 
+  isPassive: 0
+  duration: 0.25
+  cooldown: 0
+  dashSpeed: 15
+  passThrougthLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  dashParticles: {fileID: 3630138218176430939, guid: 2bd4f5db06f6ff949b3bd0efd967b1d8,
+    type: 3}
+  ticks: 3
+  damageAmount: 1
+  damageRadius: 1
+  damageRange: 1
+  damageLayerMask:
+    serializedVersion: 2
+    m_Bits: 65
+  damageEmiterType: 0
