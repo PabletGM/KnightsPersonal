@@ -95,6 +95,14 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
     //asi antes de hacer una habilidad debes , definir cual es e iniciarla
     protected BaseAbility currentAbility;
 
+    public BaseAbility CurrentAbility
+    {
+        get
+        {
+            return currentAbility;
+        }
+    }
+
 
 
     //para la duracion de la habilidad, el tiempo que lleva la habilidad actual en proceso
