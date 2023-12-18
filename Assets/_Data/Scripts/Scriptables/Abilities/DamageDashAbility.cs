@@ -17,7 +17,7 @@ public class DamageDashAbility : BaseDashAbility
     public LayerMask damageLayerMask;
     public DamageEmiterType damageEmiterType;
 
-    //???
+
     private float interval;
 
 
@@ -25,13 +25,16 @@ public class DamageDashAbility : BaseDashAbility
     public override void StartAbility(AbilityCharacter character)
     {
         base.StartAbility(character);
+        //intervalo = duracion de la habilidad / cuantas veces quiero que haga daño durante esa habilidad
+        //tiempo que va a pasar entre tick de daño y tick de daño
         interval = duration / ticks;
     }
 
-    //???
+    //dash que hace daño por ticks 
     public override void UpdateAbility(AbilityCharacter character, float deltaTime, float elapsedTime)
     {
         base.UpdateAbility(character, deltaTime, elapsedTime);
+        //(tiempo que lleva de habilidad) entre (tiempo que va a pasar entre tick de daño y tick de daño) = x = elapsedTime % interval
         if (elapsedTime % interval <= deltaTime)
         {
             if((elapsedTime / interval) < ticks)

@@ -27,7 +27,8 @@ public class SceneEnemiesController : MonoBehaviour
             //Open door to go next scene
             for( int i = 0; i < doors.Count; i++ )
             {
-                //????, se abririan todas las puertas si hacemos más o falta una condicion
+                // se abririan todas las puertas si hacemos más o falta una condicion
+                //cada sala es una escena asi que me interesa que se hagan animaciones de abarise de todas las puertas
                 DoorController controller = doors[i];
                 controller.OpenDoor();
             }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 //clase padre de toda la funcionalidad de los personajes
 //-se le asocia un MonoBehaviour para poder usar las funciones start, update, fixedUpdate, etc
-//- por qué tiene el IDamageable el AbilityCharacter ???
+//- por qué tiene el IDamageable el AbilityCharacter , porque se usa en los 2, asi los 2 hijos son IDamageable
 public class AbilityCharacter : MonoBehaviour, IDamageable
 {
     //aquí se asocia el scriptableObject PlayerStats en el caso de player que hereda de GenericStats
