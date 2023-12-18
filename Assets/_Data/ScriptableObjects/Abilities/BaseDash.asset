@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0c389bfb2683e43b309c7ed5f1c48c, type: 3}
   m_Name: BaseDash
   m_EditorClassIdentifier: 
+  isPassive: 0
   duration: 0.25
+  cooldown: 0
   dashSpeed: 15
   passThrougthLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  dashParticles: {fileID: 3630138218176430939, guid: aae3c7d9a1c52a04899719158ef9abbf,
+    type: 3}

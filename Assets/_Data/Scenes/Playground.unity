@@ -429,6 +429,10 @@ MonoBehaviour:
       type: 3}
     amountToPool: 10
     pooledObjects: []
+  - prefab: {fileID: 3630138218176430939, guid: aae3c7d9a1c52a04899719158ef9abbf,
+      type: 3}
+    amountToPool: 10
+    pooledObjects: []
 --- !u!4 &1975552534
 Transform:
   m_ObjectHideFlags: 0
@@ -877,7 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStats: {fileID: 11400000, guid: 4bacc5e288fadef4baa419176f1925ec, type: 2}
   slotAttackAbility: {fileID: 11400000, guid: 48f721bad651c0d44a284038eee716ca, type: 2}
-  slotMoveAbility: {fileID: 11400000, guid: 9a78b42c659eef442b221be8cdbf5b38, type: 2}
+  slotMoveAbility: {fileID: 11400000, guid: b23e9646ffca6d547b937391c36de7b9, type: 2}
   passiveAbilities: []
 --- !u!4 &2459061148192700651 stripped
 Transform:

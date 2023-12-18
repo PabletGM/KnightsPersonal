@@ -32,6 +32,7 @@ public class BaseDashAbility : BaseAbility
             if(poolIndex != -1)
             {
                 GameObject particles = ObjectPooler.instance.GetPooledObject(poolIndex);
+                Debug.Log(dashParticles.name);
                 particles.transform.position = character.transform.position;
                 particles.SetActive(true);
             }
