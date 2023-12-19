@@ -9,7 +9,7 @@ public class AttackAbility : BaseAbility
     //parametros de ataque
     [Header("Attack Parameters")]
     //cantidad de daño
-    public int damageAmount = 0;
+    public FloatVariable damageAmount;
     //radio de ataque
     public float attackRadius;
     //radio de rango

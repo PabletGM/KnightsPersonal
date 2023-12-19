@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,7 +31,8 @@ public class BasePrimaryAttack : AttackAbility
                     if (damageableObject != null)
                     {
                         Debug.DrawRay(sphereCastHitInfo[i].collider.transform.position, Vector3.up, Color.red, 2f);
-                        damageableObject.TakeDamage(damageAmount, damageEmiterType);
+                        damageableObject.TakeDamage(Convert.ToInt32(damageAmount.runTimeValue), damageEmiterType);
+                        Debug.Log(damageAmount.runTimeValue);
                     }
                 }
             }

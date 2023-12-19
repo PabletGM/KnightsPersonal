@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80bb9fec40b22d9438257dbc1406397b, type: 3}
-  m_Name: IncreasePlayerMovementSpeed
+  m_Name: IncreasePlayerDamage
   m_EditorClassIdentifier: 
   isPassive: 1
   duration: 0
   cooldown: 0
-  variableToChange: {fileID: 11400000, guid: 6d7ceb26e49aed7468352154518ed282, type: 2}
+  variableToChange: {fileID: 11400000, guid: 34519d08d8c185547a1e7a44aec9fd79, type: 2}
   multiplier: 2

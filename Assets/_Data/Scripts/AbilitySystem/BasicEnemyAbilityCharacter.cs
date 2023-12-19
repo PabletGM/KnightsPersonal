@@ -36,6 +36,7 @@ public class BasicEnemyAbilityCharacter : AbilityCharacter
 
         //inicializa el nav mesh Agent
         agent = GetComponent<NavMeshAgent>();
+        Debug.Log(agent);
 
         //haces una conversion con un casteo sabiendo que characterStats de tipo generico es un GenericStats, el cual es el padre de enemyStats inicializando la variable
         enemyStats = (EnemyStats)characterStats;

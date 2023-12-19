@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5562931274055652763}
   - component: {fileID: 7384134079067557514}
   m_Layer: 0
-  m_Name: passiveAbilityHolderSpeed
+  m_Name: passiveAbilityHolderDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a9b30034ba32c248814b0e7da6d1f77, type: 2}
+  - {fileID: 2100000, guid: d247f58b68270cb4ab05d87637820b07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,4 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c83c9b78475dc146afa311ab4ba2de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PassivAbility: {fileID: 11400000, guid: 5d71d6729cba7ac47bde7fc473d3282d, type: 2}
+  PassivAbility: {fileID: 11400000, guid: ee8ba4aa5b3965d42a62aaa00ae8a771, type: 2}

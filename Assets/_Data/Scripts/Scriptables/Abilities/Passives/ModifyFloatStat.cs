@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//script sobre el que se ha creado el scriptableObject IncreasePlayerMovementSpeed con la herencia de baseAbility y sus argumentos tambien
+//script sobre el que se ha creado el scriptableObject IncreasePlayerMovementSpeed con la herencia de baseAbility y sus argumentos tambien, para cambiar pasivas poniendolas como variableToChange
 [CreateAssetMenu(fileName = "ModifyFloatStat", menuName = "MicroDungeons/Abilities/Passives/ModifyFloatStat")]
 public class ModifyFloatStat : BaseAbility
 {

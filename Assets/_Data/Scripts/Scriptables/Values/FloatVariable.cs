@@ -10,6 +10,7 @@ public class FloatVariable : ScriptableObject, ISerializationCallbackReceiver
     [NonSerialized]
     public float runTimeValue;
 
+    //se accede a este valor que se modifica desde el editor como un ScriptableObject para las pasivas o parametros con el FloatVariable
     public void OnAfterDeserialize()
     {
         runTimeValue = value;
