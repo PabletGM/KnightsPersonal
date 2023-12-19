@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ef28a457d6539645b3f5552acab32dc, type: 3}
-  m_Name: IncreasePlayerDamage
+  m_Script: {fileID: 11500000, guid: e79ba8929798c5a4da386307db0c2ae2, type: 3}
+  m_Name: EnemyDamageBaseInt
   m_EditorClassIdentifier: 
-  isPassive: 1
-  duration: 0
-  cooldown: 0
-  variableToChange: {fileID: 11400000, guid: 5f4f248f8811e884d86b4e61ad753553, type: 2}
-  multiplier: 2
+  value: 1

@@ -8,7 +8,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "MicroDungeons/Stats/PlayerStats")]
 public class PlayerStats : GenericStats
 {
-    [Header("Player Stats")]
-    [SerializeField]
-    private FloatVariable baseDamage;
+
 }

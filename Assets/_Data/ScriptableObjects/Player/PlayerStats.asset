@@ -15,4 +15,4 @@ MonoBehaviour:
   health: 10
   speed: {fileID: 11400000, guid: 6d7ceb26e49aed7468352154518ed282, type: 2}
   rotationSpeed: 8
-  baseDamage: {fileID: 11400000, guid: 34519d08d8c185547a1e7a44aec9fd79, type: 2}
+  baseDamage: {fileID: 11400000, guid: 5f4f248f8811e884d86b4e61ad753553, type: 2}

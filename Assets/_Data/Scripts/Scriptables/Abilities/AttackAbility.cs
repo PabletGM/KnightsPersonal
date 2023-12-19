@@ -9,7 +9,7 @@ public class AttackAbility : BaseAbility
     //parametros de ataque
     [Header("Attack Parameters")]
     //cantidad de daño
-    public FloatVariable damageAmount;
+    public int damageAmount;
     //radio de ataque
     public float attackRadius;
     //radio de rango
@@ -23,6 +23,8 @@ public class AttackAbility : BaseAbility
     [Header("Attack Movement Parameters")]
     public float movementStopTime;
 
+    protected int totalDamageAmount;
+
     //añade funcionalidad al padre
     public override void StartAbility(AbilityCharacter character) {
         base.StartAbility(character);
@@ -30,5 +32,8 @@ public class AttackAbility : BaseAbility
         if(movementStopTime > 0f) {
             character.StopCharacterMovement();
         }
+        //cantidad de daño * baseDamage de cada personaje(sea player o enemy)
+        totalDamageAmount = damageAmount * character.CharacterStats.baseDamage.runTimeValue;
+        Debug.Log(character.CharacterStats.baseDamage.runTimeValue);
     }
 }

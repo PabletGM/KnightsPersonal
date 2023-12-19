@@ -15,7 +15,7 @@ MonoBehaviour:
   isPassive: 0
   duration: 0
   cooldown: 0.4
-  damageAmount: {fileID: 11400000, guid: 34519d08d8c185547a1e7a44aec9fd79, type: 2}
+  damageAmount: 1
   attackRadius: 1
   attackRange: 1
   attackLayerMask:

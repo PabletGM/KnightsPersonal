@@ -6,11 +6,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BasePrimaryAttack", menuName = "MicroDungeons/Abilities/BasePrimaryAttack")]
 public class BasePrimaryAttack : AttackAbility
 {
+
+   
     //añade funcionalidad a el padre ejecutando el startAbility y ejecutando la animacion de ataque del player y accediendo a su animator y activando el trigger
     public override void StartAbility(AbilityCharacter character)
     {
         base.StartAbility(character);
         character.Animator.SetTrigger("PrimaryAttack");
+        //calcular daño total a ver si hay ataque aumentado por pasiva
+        
     }
 
     //evento de animacion que se llama al atacar el player y hacer un trigger de animacion
@@ -31,8 +35,10 @@ public class BasePrimaryAttack : AttackAbility
                     if (damageableObject != null)
                     {
                         Debug.DrawRay(sphereCastHitInfo[i].collider.transform.position, Vector3.up, Color.red, 2f);
-                        damageableObject.TakeDamage(Convert.ToInt32(damageAmount.runTimeValue), damageEmiterType);
-                        Debug.Log(damageAmount.runTimeValue);
+                        //daño de habilidad + daño de player
+                        Debug.Log(totalDamageAmount);
+                        damageableObject.TakeDamage(totalDamageAmount, damageEmiterType);
+                        
                     }
                 }
             }
