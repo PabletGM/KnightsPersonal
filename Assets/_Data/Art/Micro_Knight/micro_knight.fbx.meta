@@ -452,7 +452,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.46463424
+        functionName: SendAbilityAnimationEvent
+        data: 
+        objectReferenceParameter: {fileID: 11400000, guid: 469888bbc5541fb40b701e4b5e4172ed,
+          type: 2}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -663,15 +671,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.46817252
-        functionName: SendAbilityAnimationEventBasePrimaryAttackLong
-        data: 
-        objectReferenceParameter: {fileID: 11400000, guid: 48f721bad651c0d44a284038eee716ca,
-          type: 2}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

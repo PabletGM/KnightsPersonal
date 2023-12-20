@@ -239,21 +239,6 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
         currentAbility.OnReceiveAnimationEvent(this);
     }
 
-
-    protected void SendAbilityAnimationEventBasePrimaryAttackLong()
-    {
-        if (currentAbility == null)
-        {
-            return;
-        }
-
-        //recibe el evento de animacion e inicia funcionalidad de ataque en el basePrimaryAttack
-        currentAbility.OnReceiveAnimationEvent(this);
-    }
-
-
-
-
     protected virtual void Update()
     {
         //metodo que ejecuta constantemente la habilidad actual si su duracion no ha acabado
