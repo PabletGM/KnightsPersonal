@@ -18,6 +18,13 @@ public class PlayerAbilityCharacter : AbilityCharacter
         ExecutePrimaryAbility();
     }
 
+    public void OnSecondaryAttack()
+    {
+        ExecuteSecondaryAbility();
+    }
+
+
+
     public void OnMoveAbility()
     {
         playerMovement.CanMove = false;

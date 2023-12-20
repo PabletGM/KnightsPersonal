@@ -30,6 +30,10 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
     [SerializeField]
     protected AttackAbility slotAttackAbility;
 
+    //se tiene la habilidad de ataque, en el caso del player se asocia el basePrimaryAttack
+    [SerializeField]
+    protected AttackAbility slotAttackAbilitySecondary;
+
 
     //se tiene la habilidad de movimiento, en el caso del player se asocia el damageDASHaBILITY o dashABILITY
     [SerializeField]
@@ -169,6 +173,22 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
         }
     }
 
+    protected void ExecuteSecondaryAbility()
+    {
+        if (!canDoAbilties)
+        {
+            return;
+        }
+
+        if (slotAttackAbilitySecondary != null && attackAbilityCooldown <= 0f)
+        {
+            slotAttackAbilitySecondary.StartAbility(this);
+            stoppedByExecuteAbilityTime = slotAttackAbilitySecondary.movementStopTime;
+            currentAbility = slotAttackAbilitySecondary;
+            attackAbilityCooldown = slotAttackAbilitySecondary.cooldown;
+        }
+    }
+
 
 
     //comprueba si hay permiso para ejecutar habilidades y poner la habilidad actual como slotMoveAbility
@@ -218,8 +238,20 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
     }
 
 
+    protected void SendAbilityAnimationEventBasePrimaryAttackLong()
+    {
+        if (currentAbility == null)
+        {
+            return;
+        }
 
-    
+        //recibe el evento de animacion e inicia funcionalidad de ataque en el basePrimaryAttack
+        currentAbility.OnReceiveAnimationEvent(this);
+    }
+
+
+
+
     protected virtual void Update()
     {
         //metodo que ejecuta constantemente la habilidad actual si su duracion no ha acabado
