@@ -138,6 +138,7 @@ public class BasicEnemyAbilityCharacter : AbilityCharacter
         }
 
         currentHealth -= damage;
+        Debug.Log(currentHealth);
         if(currentHealth <= 0)
         {
             ResetCurrentAbility();

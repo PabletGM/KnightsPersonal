@@ -117,6 +117,7 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
     protected float attackAbilityCooldown = 0;
 
 
+
     //inicializa el character 
     private void Start()
     {
@@ -182,6 +183,7 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
 
         if (slotAttackAbilitySecondary != null && attackAbilityCooldown <= 0f)
         {
+            //Debug.Log("hel");
             slotAttackAbilitySecondary.StartAbility(this);
             stoppedByExecuteAbilityTime = slotAttackAbilitySecondary.movementStopTime;
             currentAbility = slotAttackAbilitySecondary;
