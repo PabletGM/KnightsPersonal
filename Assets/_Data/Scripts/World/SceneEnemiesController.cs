@@ -20,12 +20,22 @@ public class SceneEnemiesController : MonoBehaviour
         currentEnemiesOnScene++;
     }
 
+    public int GetNumEnemiesAlive()
+    {
+        return currentEnemiesOnScene;
+    }
+
     //eliminar enemigo de escena
     public void RemoveEnemyFromScene() {
         currentEnemiesOnScene--;
-        if(currentEnemiesOnScene == 0 ) {
+        if(currentEnemiesOnScene == 0 ) 
+        {
+            if (PlayerManager.instance.GetNumEnemiesOnScene() == 0)
+            {
+                PlayerManager.instance.CelebrationWin();
+            }
             //Open door to go next scene
-            for( int i = 0; i < doors.Count; i++ )
+            for ( int i = 0; i < doors.Count; i++ )
             {
                 // se abririan todas las puertas si hacemos más o falta una condicion
                 //cada sala es una escena asi que me interesa que se hagan animaciones de abarise de todas las puertas

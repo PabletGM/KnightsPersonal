@@ -18,6 +18,9 @@ public class PlayerManager : MonoBehaviour
     private int currentHealth;
 
 
+    private int currentEnemiesOnScene;
+
+
     //acceder a estos valores
     public int CurrentHealth
     {
@@ -51,11 +54,25 @@ public class PlayerManager : MonoBehaviour
 
         initHealth = playerAbilityCharacter.CharacterStats.health;
         currentHealth = initHealth;
+
+        
+    }
+
+    public int GetNumEnemiesOnScene()
+    {
+        //enemigos en escena lo miramos
+        currentEnemiesOnScene = SceneEnemiesController.Instance.GetNumEnemiesAlive();
+        return currentEnemiesOnScene;
     }
 
     //devuelve PlayerStats para coger info de alguna stat
     public GenericStats GetPlayerStats()
     {
         return playerAbilityCharacter.CharacterStats;
+    }
+
+    public void CelebrationWin()
+    {
+        playerAbilityCharacter.Animator.SetTrigger("celebrate");
     }
 }

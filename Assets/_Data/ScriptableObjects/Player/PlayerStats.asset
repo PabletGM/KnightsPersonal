@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2848d321ab69443b79a28885281660, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  health: 10
+  health: 3
   speed: {fileID: 11400000, guid: 6d7ceb26e49aed7468352154518ed282, type: 2}
   rotationSpeed: 8
   baseDamage: {fileID: 11400000, guid: 5f4f248f8811e884d86b4e61ad753553, type: 2}

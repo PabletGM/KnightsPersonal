@@ -71,6 +71,16 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
         } 
     }
 
+    private PlayerManager playerManager;
+
+    public PlayerManager PlayerManager
+    {
+        get
+        {
+            return playerManager;
+        }
+    }
+
 
     //permite o da permiso de movimiento
     //usos:

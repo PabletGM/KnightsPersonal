@@ -66,11 +66,16 @@ public class PlayerAbilityCharacter : AbilityCharacter
         {
             return;
         }
-
+        
         PlayerManager.instance.CurrentHealth -= damage;
         if (PlayerManager.instance.CurrentHealth <= 0)
         {
             PlayerDied();            
+        }
+        else
+        {
+            //recibe daño hacemos animacion una vez con trigger
+            Animator.SetTrigger("Damage");
         }
     }
 
@@ -81,4 +86,7 @@ public class PlayerAbilityCharacter : AbilityCharacter
         playerMovement.CanMove = false;
         Animator.SetTrigger("IsDied");
     }
+
+
+    
 }
