@@ -16,3 +16,4 @@ MonoBehaviour:
   speed: {fileID: 11400000, guid: 6d7ceb26e49aed7468352154518ed282, type: 2}
   rotationSpeed: 8
   baseDamage: {fileID: 11400000, guid: 5f4f248f8811e884d86b4e61ad753553, type: 2}
+  attackRange: {fileID: 11400000, guid: 983de6357bf46c647a271f3f7a52856a, type: 2}

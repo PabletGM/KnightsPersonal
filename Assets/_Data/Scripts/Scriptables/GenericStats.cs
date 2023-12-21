@@ -15,4 +15,7 @@ public class GenericStats : ScriptableObject
 
     [Header("Attack Parameters")]
     public IntVariable baseDamage;
+    //radio de rango
+    public FloatVariable attackRange;
+
 }

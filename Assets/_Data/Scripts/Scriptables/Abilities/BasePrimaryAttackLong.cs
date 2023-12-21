@@ -26,7 +26,8 @@ public class BasePrimaryAttackLong : AttackAbility
         Vector3 rayOrigin = character.transform.position + new Vector3(0f, 0.5f, 0f);
 
         RaycastHit[] sphereCastHitInfo = new RaycastHit[10];
-        Physics.SphereCastNonAlloc(rayOrigin, attackRadius, character.transform.forward, sphereCastHitInfo, attackRange, attackLayerMask);
+        Debug.Log(character.CharacterStats.attackRange.runTimeValue);
+        Physics.SphereCastNonAlloc(rayOrigin, attackRadius, character.transform.forward, sphereCastHitInfo, totalRangeAmount, attackLayerMask);
         if (sphereCastHitInfo.Length > 0)
         {
 

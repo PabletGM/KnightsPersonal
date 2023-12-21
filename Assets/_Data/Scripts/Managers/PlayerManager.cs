@@ -11,6 +11,16 @@ public class PlayerManager : MonoBehaviour
     //referencia del PlayerAbilityCharacter
     private PlayerAbilityCharacter playerAbilityCharacter;
 
+    //que se pueda acceder a este
+    public PlayerAbilityCharacter PlayerAbilityCharacter
+    {
+        get
+        {
+            return playerAbilityCharacter;
+        }
+        
+    }
+
     //stat vida inicial
     private int initHealth;
 

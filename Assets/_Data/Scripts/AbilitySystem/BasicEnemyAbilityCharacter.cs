@@ -86,7 +86,7 @@ public class BasicEnemyAbilityCharacter : AbilityCharacter
                 //si está vivo ponemos el destino del enemigo la posicion del player
                 agent.SetDestination(playerManager.transform.position);
                 //si la distancia al player es< al attack range ejecuta habilidad de ataque
-                if(distanceToPlayer <= slotAttackAbility.attackRange)
+                if(distanceToPlayer <= playerManager.PlayerAbilityCharacter.CharacterStats.attackRange.runTimeValue)
                 {
                     ExecutePrimaryAbility();
                 }

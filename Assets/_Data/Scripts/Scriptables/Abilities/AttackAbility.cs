@@ -10,10 +10,10 @@ public class AttackAbility : BaseAbility
     [Header("Attack Parameters")]
     //cantidad de daño
     public int damageAmount;
+    public float rangeAmount;
     //radio de ataque
     public float attackRadius;
-    //radio de rango
-    public float attackRange;
+
     //a que puede atacar con layers
     public LayerMask attackLayerMask;
     //tipo de daño emitido
@@ -25,6 +25,8 @@ public class AttackAbility : BaseAbility
 
     protected int totalDamageAmount;
 
+    protected float totalRangeAmount;
+
     //añade funcionalidad al padre
     public override void StartAbility(AbilityCharacter character) {
         base.StartAbility(character);
@@ -34,6 +36,7 @@ public class AttackAbility : BaseAbility
         }
         //cantidad de daño * baseDamage de cada personaje(sea player o enemy)
         totalDamageAmount = damageAmount * character.CharacterStats.baseDamage.runTimeValue;
+        totalRangeAmount = rangeAmount * character.CharacterStats.attackRange.runTimeValue;
         //Debug.Log(character.CharacterStats.baseDamage.runTimeValue);
     }
 }
