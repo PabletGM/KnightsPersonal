@@ -15,6 +15,8 @@ MonoBehaviour:
   sceneAssets:
   - {fileID: 102900000, guid: 8164dd5a77a7a7b4e93f8f52a5d17317, type: 3}
   - {fileID: 102900000, guid: 413ecd3a9a9b910489a45a1aeb5d931c, type: 3}
+  - {fileID: 102900000, guid: bbcbce4652278304cae69a54bc6599ca, type: 3}
   sceneNames:
   - Room01_Scene
   - Room02_Scene
+  - Room03_Scene

@@ -33,6 +33,7 @@ public class OnTriggerTrap : MonoBehaviour
         if (damageable != null)
         {
             damageable.TakeDamage(damageAmount, DamageEmiterType.World);
+            
         }
     }
 }
