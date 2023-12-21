@@ -16,6 +16,7 @@ MonoBehaviour:
   speed: {fileID: 11400000, guid: e6c4539a05f42eb4d89f770e5473858f, type: 2}
   rotationSpeed: 0
   baseDamage: {fileID: 11400000, guid: 9e33b5b7f362fb940818d288874b1131, type: 2}
+  attackRange: {fileID: 11400000, guid: 3992d41e10ce9df4c83e51e85e10cbf6, type: 2}
   angularSpeed: 600
   stoppingDistance: 1.5
   autoBraking: 0

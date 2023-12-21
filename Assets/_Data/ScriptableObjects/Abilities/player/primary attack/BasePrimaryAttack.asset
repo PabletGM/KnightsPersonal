@@ -16,10 +16,11 @@ MonoBehaviour:
   duration: 0
   cooldown: 0.4
   damageAmount: 1
+  rangeAmount: 1
   attackRadius: 1
-  attackRange: 1
   attackLayerMask:
     serializedVersion: 2
     m_Bits: 65
   damageEmiterType: 0
   movementStopTime: 0.4
+  totalRangeAmount: 0.16000001

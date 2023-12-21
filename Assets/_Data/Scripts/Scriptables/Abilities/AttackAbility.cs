@@ -25,6 +25,7 @@ public class AttackAbility : BaseAbility
 
     protected int totalDamageAmount;
 
+    //para que el enemy sepa el range del player
     protected float totalRangeAmount;
 
     //añade funcionalidad al padre
