@@ -23,3 +23,6 @@ MonoBehaviour:
     m_Bits: 65
   damageEmiterType: 1
   movementStopTime: 1.2
+  ParticlesAttack: {fileID: 3630138218176430939, guid: 7bc597de2392c8048b5b038a03b6d21a,
+    type: 3}
+  offsetParticles: {x: 0, y: 0, z: 1}

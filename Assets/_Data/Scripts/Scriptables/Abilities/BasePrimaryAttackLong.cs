@@ -14,7 +14,8 @@ public class BasePrimaryAttackLong : AttackAbility
         base.StartAbility(character);
         character.Animator.SetTrigger("PrimaryAttackLong");
         //calcular daño total a ver si hay ataque aumentado por pasiva
-        
+        ParticlePlayerAttack(character);
+
     }
 
     //evento de animacion que se llama al atacar el player y hacer un trigger de animacion

@@ -14,6 +14,8 @@ public class BasePrimaryAttack : AttackAbility
         base.StartAbility(character);
         character.Animator.SetTrigger("PrimaryAttack");
         //calcular daño total a ver si hay ataque aumentado por pasiva
+        //llamamos a metodo de padre de particulas
+        ParticlePlayerAttack(character);
         
     }
 

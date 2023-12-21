@@ -28,6 +28,13 @@ public class AttackAbility : BaseAbility
     //para que el enemy sepa el range del player
     protected float totalRangeAmount;
 
+    //efecto de particulas segun el ataque
+    public GameObject ParticlesAttack;
+
+    public Vector3 offsetParticles;
+
+
+
     //añade funcionalidad al padre
     public override void StartAbility(AbilityCharacter character) {
         base.StartAbility(character);
@@ -39,5 +46,24 @@ public class AttackAbility : BaseAbility
         totalDamageAmount = damageAmount * character.CharacterStats.baseDamage.runTimeValue;
         totalRangeAmount = rangeAmount * character.CharacterStats.attackRange.runTimeValue;
         //Debug.Log(totalRangeAmount);
+    }
+
+
+    //para que lo utlicen los hijos
+    protected  GameObject ParticlePlayerAttack(AbilityCharacter character)
+    {
+        if (ParticlesAttack != null)
+        {
+            int poolIndex = ObjectPooler.instance.SearchPool(ParticlesAttack);
+            if (poolIndex != -1)
+            {
+                GameObject particles = ObjectPooler.instance.GetPooledObject(poolIndex);
+                Debug.Log(ParticlesAttack.name);
+                particles.transform.position = character.transform.position + offsetParticles;
+                particles.SetActive(true);
+                return particles;
+            }
+        }
+        return null;
     }
 }
