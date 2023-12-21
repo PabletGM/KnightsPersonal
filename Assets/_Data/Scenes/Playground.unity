@@ -883,7 +883,7 @@ MonoBehaviour:
   slotAttackAbility: {fileID: 11400000, guid: 48f721bad651c0d44a284038eee716ca, type: 2}
   slotAttackAbilitySecondary: {fileID: 11400000, guid: 469888bbc5541fb40b701e4b5e4172ed,
     type: 2}
-  slotMoveAbility: {fileID: 11400000, guid: b23e9646ffca6d547b937391c36de7b9, type: 2}
+  slotMoveAbility: {fileID: 11400000, guid: 9a78b42c659eef442b221be8cdbf5b38, type: 2}
   passiveAbilities: []
 --- !u!4 &2459061148192700651 stripped
 Transform:

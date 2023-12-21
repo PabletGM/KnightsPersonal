@@ -38,6 +38,6 @@ public class AttackAbility : BaseAbility
         //cantidad de daño * baseDamage de cada personaje(sea player o enemy)
         totalDamageAmount = damageAmount * character.CharacterStats.baseDamage.runTimeValue;
         totalRangeAmount = rangeAmount * character.CharacterStats.attackRange.runTimeValue;
-        //Debug.Log(character.CharacterStats.baseDamage.runTimeValue);
+        //Debug.Log(totalRangeAmount);
     }
 }

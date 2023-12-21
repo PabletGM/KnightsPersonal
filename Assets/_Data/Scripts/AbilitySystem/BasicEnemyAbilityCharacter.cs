@@ -43,20 +43,32 @@ public class BasicEnemyAbilityCharacter : AbilityCharacter
         //si hay enemyStats saca todos los datos a rellenar del nav mesh de él
         if(enemyStats != null )
         {
-            //vida actual del enemy
-            currentHealth = enemyStats.health;
-            //velocidad del enemy en el navMesh
-            agent.speed = enemyStats.speed.runTimeValue;
-            //velocidad angular del enemy en el navMesh
-            agent.angularSpeed = enemyStats.angularSpeed;
-            //distancia de frenado del enemy en el navMesh
-            agent.stoppingDistance = enemyStats.stoppingDistance;
-            //y autofrenado del enemy en el navMesh
-            agent.autoBraking = enemyStats.autoBraking;
+            EnemyStats();
         }
 
         //Get player reference
         playerManager = PlayerManager.instance;
+    }
+
+    //las calcula inicialmente
+    private void EnemyStats()
+    {
+        //vida actual del enemy
+        currentHealth = enemyStats.health;
+        //velocidad del enemy en el navMesh
+        agent.speed = enemyStats.speed.runTimeValue;
+        //velocidad angular del enemy en el navMesh
+        agent.angularSpeed = enemyStats.angularSpeed;
+        //distancia de frenado del enemy en el navMesh
+        agent.stoppingDistance = enemyStats.stoppingDistance;
+        //y autofrenado del enemy en el navMesh
+        agent.autoBraking = enemyStats.autoBraking;
+    }
+
+    //las habilidades que se pueden modifciar con pasivas y que son del agent nav mesh dbemos calcularlas todo el rato por si el enemy coge una pasiva
+    private void StatsEnemyPasiva()
+    {
+        agent.speed = enemyStats.speed.runTimeValue;
     }
 
 
@@ -64,6 +76,8 @@ public class BasicEnemyAbilityCharacter : AbilityCharacter
     //añade funcionalidad a el Update del AbilityCharacter
     protected override void Update()
     {
+        StatsEnemyPasiva();
+
         //se puede ejecutar mientras le quede vida al enemy y pueda hacer habilidades
         if (!canDoAbilties && currentHealth <= 0)
         {
@@ -86,8 +100,8 @@ public class BasicEnemyAbilityCharacter : AbilityCharacter
                 //si está vivo ponemos el destino del enemigo la posicion del player
                 agent.SetDestination(playerManager.transform.position);
                 //si la distancia al player es< al attack range ejecuta habilidad de ataque
-                Debug.Log(distanceToPlayer);
-                Debug.Log(slotAttackAbility.rangeAmount);
+                //Debug.Log(distanceToPlayer);
+                //Debug.Log(slotAttackAbility.rangeAmount);
                 if (distanceToPlayer <= slotAttackAbility.rangeAmount)
                 {
                     ExecutePrimaryAbility();

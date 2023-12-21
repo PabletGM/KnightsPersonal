@@ -118,4 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c83c9b78475dc146afa311ab4ba2de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PassivAbility: {fileID: 11400000, guid: dd00283c848127a4b9d123cb810aa163, type: 2}
+  PassiveAbilityPlayer: {fileID: 11400000, guid: dd00283c848127a4b9d123cb810aa163,
+    type: 2}
+  PassiveAbilityEnemy: {fileID: 11400000, guid: 44098078f16330c4295fba8a11911d0e,
+    type: 2}

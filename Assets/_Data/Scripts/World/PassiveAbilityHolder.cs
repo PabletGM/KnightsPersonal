@@ -6,14 +6,23 @@ using UnityEngine;
 public class PassiveAbilityHolder : MonoBehaviour
 {
     [SerializeField]
-    private BaseAbility PassivAbility;
+    private BaseAbility PassiveAbilityPlayer;
+
+    [SerializeField]
+    private BaseAbility PassiveAbilityEnemy;
 
     private void OnTriggerEnter(Collider other)
     {
         PlayerAbilityCharacter character = other.GetComponent<PlayerAbilityCharacter>();
-        if (character != null)
+        BasicEnemyAbilityCharacter basicEnemy = other.GetComponent<BasicEnemyAbilityCharacter>();
+        if (character != null && PassiveAbilityPlayer!=null)
         {
-            character.AddPassiveAbility(PassivAbility);
+            character.AddPassiveAbility(PassiveAbilityPlayer);
+            Destroy(gameObject);
+        }
+        else if(basicEnemy != null && PassiveAbilityEnemy!=null) 
+        {
+            basicEnemy.AddPassiveAbility(PassiveAbilityEnemy);
             Destroy(gameObject);
         }
     }
