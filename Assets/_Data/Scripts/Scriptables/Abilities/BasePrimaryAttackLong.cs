@@ -11,7 +11,7 @@ public class BasePrimaryAttackLong : AttackAbility
    //sobreescribe la animacion del startAbility del BasePrimaryAttack
     public override void StartAbility(AbilityCharacter character)
     {
-        //base.StartAbility(character);
+        base.StartAbility(character);
         character.Animator.SetTrigger("PrimaryAttackLong");
         //calcular daño total a ver si hay ataque aumentado por pasiva
         
