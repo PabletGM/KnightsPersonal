@@ -10,7 +10,7 @@ public class OnTriggerTrapEnemy : MonoBehaviour
 
     
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
 
         BasicEnemyAbilityCharacter basicEnemy = other.GetComponent<BasicEnemyAbilityCharacter>();
