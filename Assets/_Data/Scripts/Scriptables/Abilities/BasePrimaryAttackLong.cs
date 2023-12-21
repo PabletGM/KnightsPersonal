@@ -22,23 +22,23 @@ public class BasePrimaryAttackLong : AttackAbility
     public override void OnReceiveAnimationEvent(AbilityCharacter character)
     {
 
-        Debug.Log("1");
+
         Vector3 rayOrigin = character.transform.position + new Vector3(0f, 0.5f, 0f);
 
         RaycastHit[] sphereCastHitInfo = new RaycastHit[10];
         Physics.SphereCastNonAlloc(rayOrigin, attackRadius, character.transform.forward, sphereCastHitInfo, attackRange, attackLayerMask);
         if (sphereCastHitInfo.Length > 0)
         {
-            Debug.Log("2");
+
             for (int i = 0; i < sphereCastHitInfo.Length; i++)
             {
-                Debug.Log("3");
+ 
                 if (sphereCastHitInfo[i].collider != null)
                 {
                     IDamageable damageableObject = sphereCastHitInfo[i].collider.GetComponent<IDamageable>();
                     if (damageableObject != null)
                     {
-                        Debug.Log("4");
+            
                         Debug.DrawRay(sphereCastHitInfo[i].collider.transform.position, Vector3.up, Color.red, 2f);
                         //daño de habilidad + daño de player
                         //Debug.Log(totalDamageAmount);

@@ -268,7 +268,7 @@ public class AbilityCharacter : MonoBehaviour, IDamageable
         
 
         //por otra parte mira si la habilidad actual es la de ataque, si puede moverse y no hay coolDown para hacer el cronometro de cuando podrá moverse(cuando haya acabado la habilidad actual, si se ha acabado, permite el movimiento
-        if( currentAbility == slotAttackAbility && slotAttackAbility.movementStopTime > 0f && stoppedByExecuteAbilityTime > 0f) {
+        if( currentAbility == slotAttackAbility && slotAttackAbility.movementStopTime > 0f && stoppedByExecuteAbilityTime > 0f || currentAbility == slotAttackAbilitySecondary && slotAttackAbility.movementStopTime > 0f && stoppedByExecuteAbilityTime > 0f) {
 
             stoppedByExecuteAbilityTime -= Time.deltaTime;
             if(stoppedByExecuteAbilityTime <= 0f) {
